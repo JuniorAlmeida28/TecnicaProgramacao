@@ -27,7 +27,7 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        buttonEsquecer = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         buttonEntrar = new javax.swing.JToggleButton();
         textLogin = new javax.swing.JTextField();
@@ -44,11 +44,11 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Esqueceu sua senha?");
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 480, -1, -1));
+        buttonEsquecer.setForeground(new java.awt.Color(255, 255, 255));
+        buttonEsquecer.setText("Esqueceu sua senha?");
+        buttonEsquecer.setContentAreaFilled(false);
+        buttonEsquecer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(buttonEsquecer, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 480, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -161,8 +161,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JButton buttonCadastro;
     private javax.swing.JToggleButton buttonEntrar;
+    private javax.swing.JButton buttonEsquecer;
     private javax.swing.JLabel fundotransparente;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelLogin;
