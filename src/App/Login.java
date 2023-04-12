@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+//// * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package App;
 
@@ -48,36 +48,41 @@ public class Login extends javax.swing.JFrame {
         buttonEsquecer.setText("Esqueceu sua senha?");
         buttonEsquecer.setContentAreaFilled(false);
         buttonEsquecer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(buttonEsquecer, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 480, -1, -1));
+        buttonEsquecer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEsquecerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonEsquecer, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Não tem cadastro?");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 610, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 610, -1, -1));
 
         buttonEntrar.setText("Entrar");
-        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 540, 130, 40));
-        jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 400, 210, 30));
+        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 540, 130, 40));
+        jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 400, 210, 30));
 
         textSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textSenhaActionPerformed(evt);
             }
         });
-        jPanel1.add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, 210, 30));
+        jPanel1.add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 450, 210, 30));
 
         labelLogin.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         labelLogin.setText("Login");
-        jPanel1.add(labelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 400, -1, -1));
+        jPanel1.add(labelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 400, -1, -1));
         labelLogin.getAccessibleContext().setAccessibleName("Senha");
 
         labelSenha.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         labelSenha.setText("Senha");
-        jPanel1.add(labelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 450, -1, -1));
+        jPanel1.add(labelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 450, -1, -1));
 
         logo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         logo.setText("LOGO AQUI");
-        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 270, -1, -1));
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 270, -1, -1));
 
         buttonCadastro.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         buttonCadastro.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,28 +94,28 @@ public class Login extends javax.swing.JFrame {
                 buttonCadastroActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 590, 120, 60));
+        jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 590, 120, 60));
 
         fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Site para Link na Bio Tecnologia e Jogos Escuro Simples Azul-escuro (5).png"))); // NOI18N
         fundotransparente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         fundotransparente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(fundotransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 400, 600));
+        jPanel1.add(fundotransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 400, 600));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/835be700-18e5-4884-b06a-dd5394305b2d.png"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1960, 1200));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1915, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1083, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1931, 1091));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -120,7 +125,15 @@ public class Login extends javax.swing.JFrame {
 
     private void buttonCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroActionPerformed
         // TODO add your handling code here:
+        Cadastro cadastro = new Cadastro();
+        cadastro.setVisible(true);
     }//GEN-LAST:event_buttonCadastroActionPerformed
+
+    private void buttonEsquecerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEsquecerActionPerformed
+        // TODO add your handling code here:
+        Redefinir redefinir = new Redefinir();
+        redefinir.setVisible(true);
+    }//GEN-LAST:event_buttonEsquecerActionPerformed
 
     /**
      * @param args the command line arguments
