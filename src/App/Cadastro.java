@@ -278,7 +278,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
         // TODO add your handling code here:
-        
+        setVisible(false);
     }//GEN-LAST:event_buttonCancelarActionPerformed
 
     /**

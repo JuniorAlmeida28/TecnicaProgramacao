@@ -61,6 +61,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 610, -1, -1));
 
         buttonEntrar.setText("Entrar");
+        buttonEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 540, 130, 40));
         jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 400, 210, 30));
 

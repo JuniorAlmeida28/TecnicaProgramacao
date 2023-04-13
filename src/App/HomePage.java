@@ -95,6 +95,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
@@ -172,26 +173,27 @@ public class HomePage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 60)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Logo Aqui");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 30, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 30, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Comece a Economizar");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 110, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 110, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Que produto você gostaria de pesquisar?");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, -1, -1));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 200, 600, 40));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, -1, -1));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 200, 600, 40));
 
         buttonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/lupa (1).png"))); // NOI18N
-        jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 200, 60, 40));
+        buttonBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 200, 60, 40));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Digite o nome do produto, marca ou código de barras para realizar a pesquisa individual.");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (1).png"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1900, 330));
@@ -412,6 +414,10 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel12.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 240, 100));
 
         jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (2).png"))); // NOI18N
         jPanel12.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
@@ -832,6 +838,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JPanel Promocao;
     private javax.swing.JPanel Recomendacao;
     private javax.swing.JToggleButton buttonBuscar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
