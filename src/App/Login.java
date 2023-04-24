@@ -41,7 +41,9 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonEsquecer.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,8 +104,8 @@ public class Login extends javax.swing.JFrame {
         fundotransparente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(fundotransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 400, 600));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/835be700-18e5-4884-b06a-dd5394305b2d.png"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1960, 1200));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Fundo800X600.png"))); // NOI18N
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,7 +118,7 @@ public class Login extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1083, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        setSize(new java.awt.Dimension(1931, 1091));
+        setSize(new java.awt.Dimension(816, 608));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
