@@ -4,6 +4,8 @@
  */
 package App;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junio
@@ -41,7 +43,6 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,9 +67,17 @@ public class Login extends javax.swing.JFrame {
         buttonEntrar.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         buttonEntrar.setText("Entrar");
         buttonEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEntrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 110, 30));
+
+        textLogin.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 150, 20));
 
+        textSenha.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         textSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textSenhaActionPerformed(evt);
@@ -101,7 +110,7 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 120, 60));
 
-        fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (5).png"))); // NOI18N
+        fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/login.jpg"))); // NOI18N
         fundotransparente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         fundotransparente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(fundotransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 200, 300));
@@ -139,6 +148,19 @@ public class Login extends javax.swing.JFrame {
         Redefinir redefinir = new Redefinir();
         redefinir.setVisible(true);
     }//GEN-LAST:event_buttonEsquecerActionPerformed
+
+    private void buttonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarActionPerformed
+        // TODO add your handling code here:
+        String login = textLogin.getText();
+        String senha = textSenha.getText();
+        HomePage home = new HomePage();
+        
+        if (("usuario".equals(login)) && ("123".equals(senha))){
+            home.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Usuário não encontrado. Verifique suas credenciais ou cadastre-se.", "Login Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_buttonEntrarActionPerformed
 
     /**
      * @param args the command line arguments

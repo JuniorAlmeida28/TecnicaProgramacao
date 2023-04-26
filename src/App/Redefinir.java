@@ -4,6 +4,8 @@
  */
 package App;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junio
@@ -54,6 +56,11 @@ public class Redefinir extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(51, 153, 255));
         jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("Enviar");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,6 +129,12 @@ public class Redefinir extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        String usuario = jTextField1.getText();
+        JOptionPane.showMessageDialog(rootPane, "Verifique o email " + usuario + " para redefinir sua senha.");
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
