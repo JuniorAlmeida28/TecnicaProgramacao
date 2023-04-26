@@ -112,7 +112,7 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 120, 60));
 
-        fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/login.jpg"))); // NOI18N
+        fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (7).png"))); // NOI18N
         fundotransparente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         fundotransparente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(fundotransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 200, 300));
