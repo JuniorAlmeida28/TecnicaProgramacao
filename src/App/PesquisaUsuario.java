@@ -7,8 +7,6 @@ package App;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.WARNING_MESSAGE;
-import static javax.swing.JOptionPane.YES_NO_OPTION;
 
 /**
  *
@@ -16,6 +14,7 @@ import static javax.swing.JOptionPane.YES_NO_OPTION;
  */
 public class PesquisaUsuario extends javax.swing.JFrame {
     
+    HomePage homePage = new HomePage();
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     Date dataAtual = new Date();
 
@@ -100,6 +99,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        sair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -581,6 +581,14 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jMenuItem3.setText("Configurações");
         jMenu1.add(jMenuItem3);
 
+        sair.setText("Logout");
+        sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairActionPerformed(evt);
+            }
+        });
+        jMenu1.add(sair);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Sobre");
@@ -616,9 +624,10 @@ public class PesquisaUsuario extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        //HomePage homePage = new HomePage();
         setVisible(false);
+        homePage.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
@@ -635,6 +644,14 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         JOptionPane.showOptionDialog(null, "Gostaria de mudar sua localização?", "Confirme a localização", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[] {"Yes", "No"}, "No");
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        Login login = new Login();
+        login.setVisible(true);
+        homePage.setVisible(false);
+    }//GEN-LAST:event_sairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -739,5 +756,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JMenuItem sair;
     // End of variables declaration//GEN-END:variables
 }
