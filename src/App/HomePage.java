@@ -10,6 +10,8 @@ package App;
  */
 public class HomePage extends javax.swing.JFrame {
 
+    //PesquisaUsuario pesquisa = new PesquisaUsuario();
+    
     /**
      * Creates new form HomePage
      */
@@ -159,6 +161,7 @@ public class HomePage extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        sair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -791,6 +794,14 @@ public class HomePage extends javax.swing.JFrame {
         jMenuItem3.setText("Configurações");
         jMenu1.add(jMenuItem3);
 
+        sair.setText("Logout");
+        sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairActionPerformed(evt);
+            }
+        });
+        jMenu1.add(sair);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Sobre");
@@ -806,9 +817,18 @@ public class HomePage extends javax.swing.JFrame {
 
     private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
         PesquisaUsuario pesquisa = new PesquisaUsuario();
         pesquisa.setVisible(true);
+        
     }//GEN-LAST:event_buttonBuscarActionPerformed
+
+    private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        Login login = new Login();
+        login.setVisible(true);
+    }//GEN-LAST:event_sairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -981,5 +1001,6 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JMenuItem sair;
     // End of variables declaration//GEN-END:variables
 }

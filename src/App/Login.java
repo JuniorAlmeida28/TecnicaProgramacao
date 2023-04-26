@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
     
+    HomePage home = new HomePage();
+    
     /**
      * Creates new form Login
      */
@@ -153,10 +155,11 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         String login = textLogin.getText();
         String senha = textSenha.getText();
-        HomePage home = new HomePage();
+        //HomePage home = new HomePage();
         
         if (("usuario".equals(login)) && ("123".equals(senha))){
             home.setVisible(true);
+            setVisible(false);
         } else {
             JOptionPane.showMessageDialog(rootPane, "Usuário não encontrado. Verifique suas credenciais ou cadastre-se.", "Login Error", JOptionPane.ERROR_MESSAGE);
         }
