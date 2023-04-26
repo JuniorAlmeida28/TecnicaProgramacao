@@ -74,7 +74,7 @@ public class Login extends javax.swing.JFrame {
                 buttonEntrarActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 110, 30));
+        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 110, 30));
 
         textLogin.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 150, 20));
