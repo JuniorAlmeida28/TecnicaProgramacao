@@ -7,8 +7,6 @@ package App;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.WARNING_MESSAGE;
-import static javax.swing.JOptionPane.YES_NO_OPTION;
 
 /**
  *
