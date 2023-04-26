@@ -188,6 +188,11 @@ public class HomePage extends javax.swing.JFrame {
 
         buttonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/lupa (1).png"))); // NOI18N
         buttonBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarActionPerformed(evt);
+            }
+        });
         jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 200, 60, 40));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -798,6 +803,12 @@ public class HomePage extends javax.swing.JFrame {
 
         setBounds(0, 0, 1931, 1089);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
+        // TODO add your handling code here:
+        PesquisaUsuario pesquisa = new PesquisaUsuario();
+        pesquisa.setVisible(true);
+    }//GEN-LAST:event_buttonBuscarActionPerformed
 
     /**
      * @param args the command line arguments
