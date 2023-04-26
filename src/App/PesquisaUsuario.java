@@ -63,6 +63,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
         jLabel22 = new javax.swing.JLabel();
+        adc_carrinho2 = new javax.swing.JToggleButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -78,9 +79,10 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jToggleButton3 = new javax.swing.JToggleButton();
         jToggleButton4 = new javax.swing.JToggleButton();
         jLabel35 = new javax.swing.JLabel();
+        jToggleButton5 = new javax.swing.JToggleButton();
+        adc_carrinho1 = new javax.swing.JToggleButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -91,7 +93,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1060));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -147,8 +148,8 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1422, Short.MAX_VALUE))
-            .addComponent(jSeparator1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 281, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +166,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         );
 
         jButton1.getAccessibleContext().setAccessibleName("Ajustes");
-        jButton1.getAccessibleContext().setAccessibleDescription("Ajustes");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -239,6 +239,15 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shop.png"))); // NOI18N
         jLabel22.setToolTipText("Estabelecimento");
 
+        adc_carrinho2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shopping-cart-black-shape.png"))); // NOI18N
+        adc_carrinho2.setText("   ADICIONAR AO CARRINHO");
+        adc_carrinho2.setToolTipText("Historico de preço");
+        adc_carrinho2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adc_carrinho2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -251,7 +260,9 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel12))
+                        .addComponent(jLabel12)
+                        .addGap(27, 27, 27)
+                        .addComponent(adc_carrinho2))
                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1460, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
@@ -296,7 +307,10 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel11))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(adc_carrinho2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -327,146 +341,89 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel5.setToolTipText("Buscar por codigo de barra");
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/projeto_site_static_img_produtos_7896006711117_000001.jpg"))); // NOI18N
+        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel24.setText("ARROZ BRANCO T1 1KG CAMIL");
+        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/bar-code (3).png"))); // NOI18N
         jButton4.setContentAreaFilled(false);
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 50, -1));
 
         jLabel25.setFont(new java.awt.Font("SansSerif", 1, 40)); // NOI18N
         jLabel25.setText("R$ 2,99");
+        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, -1, 60));
 
         jLabel26.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel26.setText("AMERICANAS SA");
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 106, -1, 20));
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/sign-post.png"))); // NOI18N
         jLabel27.setToolTipText("Endereço");
         jLabel27.setPreferredSize(new java.awt.Dimension(22, 23));
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, -1, 30));
 
         jLabel28.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel28.setText("R. Dep. Odon Bezerra, 184 - Baixo Roger, João Pessoa - PB, 58020-500");
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 130, -1, 30));
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/compass.png"))); // NOI18N
         jLabel29.setToolTipText("Distancia aproximada");
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, 20));
 
         jLabel30.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel30.setText("2,01 km");
+        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 160, -1, 20));
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/calendar.png"))); // NOI18N
         jLabel31.setToolTipText("Data de emissão da NF-E");
+        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, -1));
 
         jLabel32.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel32.setText("há 1 dia(s), 18 hora(s), 34 minuto(s) e 53 segundo(s)");
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 190, -1, -1));
 
         jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/telephone.png"))); // NOI18N
         jLabel33.setToolTipText("Telefone do estabelecimento");
+        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
         jLabel34.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel34.setText("(00) 0000-0000");
-
-        jToggleButton3.setText("HISTORICO");
-        jToggleButton3.setToolTipText("Historico de preço");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
-            }
-        });
+        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 217, -1, -1));
+        jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 253, 1460, 10));
 
         jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
         jToggleButton4.setText("ROTA");
         jToggleButton4.setToolTipText("Como chegar?");
+        jPanel5.add(jToggleButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 266, 90, 30));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shop.png"))); // NOI18N
         jLabel35.setToolTipText("Estabelecimento");
+        jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 22, -1));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(jLabel23)
-                .addGap(75, 75, 75)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel25))
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 1460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel28)))
-                            .addComponent(jLabel24)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel29)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel30))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jToggleButton3))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel31)
-                                    .addComponent(jLabel33))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel32)
-                                    .addComponent(jLabel34)))))))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(jLabel23))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jButton4))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35))
-                .addGap(4, 4, 4)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel31)
-                    .addComponent(jLabel32))
-                .addGap(8, 8, 8)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel33)
-                    .addComponent(jLabel34))
-                .addGap(17, 17, 17)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        jToggleButton5.setText("HISTORICO");
+        jToggleButton5.setToolTipText("Historico de preço");
+        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton5ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jToggleButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 266, -1, 30));
+
+        adc_carrinho1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shopping-cart-black-shape.png"))); // NOI18N
+        adc_carrinho1.setText("   ADICIONAR AO CARRINHO");
+        adc_carrinho1.setToolTipText("Historico de preço");
+        adc_carrinho1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adc_carrinho1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(adc_carrinho1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 50, -1, 40));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -486,7 +443,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                 .addContainerGap(1460, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1888, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -552,9 +509,12 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -572,7 +532,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
         setVisible(false);
@@ -582,9 +542,19 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+    private void adc_carrinho2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adc_carrinho2ActionPerformed
+    ListaDeCompras listadecompras = new ListaDeCompras();
+    listadecompras.setVisible(true);
+    }//GEN-LAST:event_adc_carrinho2ActionPerformed
+
+    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    private void adc_carrinho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adc_carrinho1ActionPerformed
+    ListaDeCompras listadecompras = new ListaDeCompras();
+    listadecompras.setVisible(true);
+    }//GEN-LAST:event_adc_carrinho1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -622,6 +592,8 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton adc_carrinho1;
+    private javax.swing.JToggleButton adc_carrinho2;
     private javax.swing.JToggleButton buttonBuscar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -683,7 +655,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton5;
     // End of variables declaration//GEN-END:variables
 }
