@@ -76,10 +76,10 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
-        jToggleButton5 = new javax.swing.JToggleButton();
         jToggleButton6 = new javax.swing.JToggleButton();
         jButton8 = new javax.swing.JButton();
         jLabel48 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
@@ -256,20 +256,12 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jLabel47.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel47.setText("(00) 0000-0000");
 
-        jToggleButton5.setText("HISTORICO");
-        jToggleButton5.setToolTipText("Historico de preço");
-        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton5ActionPerformed(evt);
-            }
-        });
-
         jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
         jToggleButton6.setText("ROTA");
         jToggleButton6.setToolTipText("Como chegar?");
         jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton6ActionPerformed(evt);
+                jToggleButton4ActionPerformed(evt);
             }
         });
 
@@ -281,6 +273,13 @@ public class PesquisaUsuario extends javax.swing.JFrame {
 
         jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shop.png"))); // NOI18N
         jLabel48.setToolTipText("Estabelecimento");
+
+        jButton3.setText("Historico");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -305,9 +304,9 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                                 .addComponent(jLabel43))
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jToggleButton5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3)
+                                .addGap(15, 15, 15)
                                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -366,10 +365,10 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton3))
+                            .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(19, 19, 19))
         );
 
@@ -425,37 +424,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
             }
         });
 
-//<<<<<<< yasmin3
-        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
-        jToggleButton4.setText("ROTA");
-        jToggleButton4.setToolTipText("Como chegar?");
-        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shopping-cart-black-shape.png"))); // NOI18N
-        jButton5.setText("Adicionar a lista");
-        jButton5.setMaximumSize(new java.awt.Dimension(90, 23));
-        jButton5.setMinimumSize(new java.awt.Dimension(90, 23));
-        jButton5.setPreferredSize(new java.awt.Dimension(90, 23));
-
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shop.png"))); // NOI18N
-        jLabel35.setToolTipText("Estabelecimento");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(jLabel23)
-                .addGap(75, 75, 75)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-//=======
         jToggleButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
         jToggleButton8.setText("ROTA");
         jToggleButton8.setToolTipText("Como chegar?");
@@ -480,7 +448,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-//>>>>>>> main
                         .addGap(10, 10, 10)
                         .addComponent(jLabel51))
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -706,7 +673,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         homePage.setVisible(false);
     }//GEN-LAST:event_sairActionPerformed
 
-//<<<<<<< yasmin3
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
         // TODO add your handling code here:
         Desktop desktop = java.awt.Desktop.getDesktop();
@@ -732,12 +698,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_buttonBuscarActionPerformed
 
-    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        // TODO add your handling code here:
-        Historico historico = new Historico();
-        historico.setVisible(true);
-    }//GEN-LAST:event_jToggleButton5ActionPerformed
-
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton7ActionPerformed
@@ -759,6 +719,12 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Historico historico = new Historico();
+        historico.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -802,6 +768,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -859,7 +826,6 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JToggleButton jToggleButton5;
     private javax.swing.JToggleButton jToggleButton6;
     private javax.swing.JToggleButton jToggleButton7;
     private javax.swing.JToggleButton jToggleButton8;
