@@ -4,8 +4,14 @@
  */
 package App;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -414,6 +420,37 @@ public class PesquisaUsuario extends javax.swing.JFrame {
             }
         });
 
+//<<<<<<< yasmin3
+        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
+        jToggleButton4.setText("ROTA");
+        jToggleButton4.setToolTipText("Como chegar?");
+        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shopping-cart-black-shape.png"))); // NOI18N
+        jButton5.setText("Adicionar a lista");
+        jButton5.setMaximumSize(new java.awt.Dimension(90, 23));
+        jButton5.setMinimumSize(new java.awt.Dimension(90, 23));
+        jButton5.setPreferredSize(new java.awt.Dimension(90, 23));
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shop.png"))); // NOI18N
+        jLabel35.setToolTipText("Estabelecimento");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel23)
+                .addGap(75, 75, 75)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+//=======
         jToggleButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
         jToggleButton8.setText("ROTA");
         jToggleButton8.setToolTipText("Como chegar?");
@@ -438,6 +475,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+//>>>>>>> main
                         .addGap(10, 10, 10)
                         .addComponent(jLabel51))
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -662,6 +700,24 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         homePage.setVisible(false);
     }//GEN-LAST:event_sairActionPerformed
 
+//<<<<<<< yasmin3
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        // TODO add your handling code here:
+        Desktop desktop = java.awt.Desktop.getDesktop();
+        URI uri = null;
+        try {
+            uri = new URI("https://goo.gl/maps/tSZQ9wLR2kFUjxW29");
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PesquisaUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            desktop.browse(uri);
+        } catch (IOException ex) {
+            Logger.getLogger(PesquisaUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
+//=======
     private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
         // TODO add your handling code here:
         setVisible(false);
@@ -677,6 +733,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton7ActionPerformed
+//>>>>>>> main
 
     /**
      * @param args the command line arguments

@@ -1,5 +1,7 @@
 build/classes/App/*.class
 build/classes/App/*.form
 build/classes/App/Imagem/*.jpg
+build/classes/App/Imagem/*.png
+
 
 
