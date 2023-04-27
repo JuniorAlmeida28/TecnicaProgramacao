@@ -137,7 +137,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                 buttonBuscarActionPerformed(evt);
             }
         });
-        jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 40, 30));
+        jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 70, 30));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 8)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -267,6 +267,11 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
         jToggleButton6.setText("ROTA");
         jToggleButton6.setToolTipText("Como chegar?");
+        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton6ActionPerformed(evt);
+            }
+        });
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shopping-cart-black-shape.png"))); // NOI18N
         jButton8.setText("Adicionar a lista");
@@ -675,7 +680,8 @@ public class PesquisaUsuario extends javax.swing.JFrame {
 
         jPanel1.getAccessibleContext().setAccessibleParent(jPanel1);
 
-        setBounds(0, 0, 817, 857);
+        setSize(new java.awt.Dimension(817, 857));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -728,12 +734,31 @@ public class PesquisaUsuario extends javax.swing.JFrame {
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
         // TODO add your handling code here:
+        Historico historico = new Historico();
+        historico.setVisible(true);
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton7ActionPerformed
 //>>>>>>> main
+
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        // TODO add your handling code here:
+        Desktop desktop = java.awt.Desktop.getDesktop();
+        URI uri = null;
+        try {
+            uri = new URI("https://goo.gl/maps/tSZQ9wLR2kFUjxW29");
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PesquisaUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            desktop.browse(uri);
+        } catch (IOException ex) {
+            Logger.getLogger(PesquisaUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     /**
      * @param args the command line arguments

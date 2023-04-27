@@ -194,7 +194,7 @@ public class HomePage extends javax.swing.JFrame {
                 buttonBuscarActionPerformed(evt);
             }
         });
-        jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 40, 30));
+        jPanel2.add(buttonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 70, 30));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 8)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -810,7 +810,8 @@ public class HomePage extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setBounds(0, 0, 816, 785);
+        setSize(new java.awt.Dimension(817, 751));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
