@@ -4,8 +4,14 @@
  */
 package App;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -407,6 +413,11 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
         jToggleButton4.setText("ROTA");
         jToggleButton4.setToolTipText("Como chegar?");
+        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/shopping-cart-black-shape.png"))); // NOI18N
         jButton5.setText("Adicionar a lista");
@@ -652,6 +663,23 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         login.setVisible(true);
         homePage.setVisible(false);
     }//GEN-LAST:event_sairActionPerformed
+
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        // TODO add your handling code here:
+        Desktop desktop = java.awt.Desktop.getDesktop();
+        URI uri = null;
+        try {
+            uri = new URI("https://goo.gl/maps/tSZQ9wLR2kFUjxW29");
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PesquisaUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            desktop.browse(uri);
+        } catch (IOException ex) {
+            Logger.getLogger(PesquisaUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     /**
      * @param args the command line arguments
