@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
     
     HomePage home = new HomePage();
+    HomepageFornecedor homefor = new HomepageFornecedor();
     
     /**
      * Creates new form Login
@@ -172,6 +173,9 @@ public class Login extends javax.swing.JFrame {
         
         if (("usuario".equals(login)) && ("123".equals(senha))){
             home.setVisible(true);
+            setVisible(false);
+        } else if(("usuario".equals(login)) && ("1234".equals(senha))){
+            homefor.setVisible(true);
             setVisible(false);
         } else {
             JOptionPane.showMessageDialog(rootPane, "Usuário não encontrado. Verifique suas credenciais ou cadastre-se.", "Login Error", JOptionPane.ERROR_MESSAGE);
