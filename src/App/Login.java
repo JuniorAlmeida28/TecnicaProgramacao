@@ -36,6 +36,7 @@ public class Login extends javax.swing.JFrame {
         buttonEntrar = new javax.swing.JToggleButton();
         textLogin = new javax.swing.JTextField();
         textSenha = new javax.swing.JTextField();
+        cadastroFornecedor = new javax.swing.JButton();
         labelLogin = new javax.swing.JLabel();
         labelSenha = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
@@ -64,7 +65,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Não tem cadastro?");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, -1, -1));
 
         buttonEntrar.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         buttonEntrar.setText("Entrar");
@@ -87,6 +88,18 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 150, 20));
 
+        cadastroFornecedor.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
+        cadastroFornecedor.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroFornecedor.setText("Crie sua conta Fornecedor");
+        cadastroFornecedor.setContentAreaFilled(false);
+        cadastroFornecedor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cadastroFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastroFornecedorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cadastroFornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 180, 30));
+
         labelLogin.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         labelLogin.setText("Login");
         jPanel1.add(labelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, -1));
@@ -102,7 +115,7 @@ public class Login extends javax.swing.JFrame {
 
         buttonCadastro.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         buttonCadastro.setForeground(new java.awt.Color(255, 255, 255));
-        buttonCadastro.setText("Crie sua conta");
+        buttonCadastro.setText("Crie sua conta Cliente");
         buttonCadastro.setContentAreaFilled(false);
         buttonCadastro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonCadastro.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +123,7 @@ public class Login extends javax.swing.JFrame {
                 buttonCadastroActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 120, 60));
+        jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 180, 30));
 
         fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (7).png"))); // NOI18N
         fundotransparente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -165,6 +178,12 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonEntrarActionPerformed
 
+    private void cadastroFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroFornecedorActionPerformed
+        // TODO add your handling code here:
+        CadastroFornecedor fornecedor = new CadastroFornecedor();
+        fornecedor.setVisible(true);
+    }//GEN-LAST:event_cadastroFornecedorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -205,6 +224,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton buttonCadastro;
     private javax.swing.JToggleButton buttonEntrar;
     private javax.swing.JButton buttonEsquecer;
+    private javax.swing.JButton cadastroFornecedor;
     private javax.swing.JLabel fundotransparente;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
