@@ -75,7 +75,7 @@ public class Login extends javax.swing.JFrame {
                 buttonEntrarActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 110, 30));
+        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 110, 30));
 
         textLogin.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 150, 20));
@@ -125,7 +125,7 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 180, 30));
 
-        fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/login.jpg"))); // NOI18N
+        fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (7).png"))); // NOI18N
         fundotransparente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         fundotransparente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(fundotransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 200, 300));
