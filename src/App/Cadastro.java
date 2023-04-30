@@ -10,6 +10,10 @@ package App;
  */
 public class Cadastro extends javax.swing.JFrame {
 
+    String email;
+    String senha;
+    String senhaConfirma;
+    
     /**
      * Creates new form Cadastro
      */
@@ -38,9 +42,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         textEmail = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        textSenhaCadas = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        textConfimarSenha = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
@@ -55,6 +57,8 @@ public class Cadastro extends javax.swing.JFrame {
         textCep = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         textEstado = new javax.swing.JTextField();
+        textSenhaCadas = new javax.swing.JPasswordField();
+        textConfimarSenha = new javax.swing.JPasswordField();
         buttonFinalizar = new javax.swing.JToggleButton();
         buttonCancelar = new javax.swing.JToggleButton();
 
@@ -211,8 +215,8 @@ public class Cadastro extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(textSenhaCadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7)
+                            .addComponent(textSenhaCadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textConfimarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(32, 32, 32)
                         .addComponent(jLabel8))
@@ -274,6 +278,10 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void buttonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFinalizarActionPerformed
         // TODO add your handling code here:
+        email = textEmail.getText();
+        senha = textSenhaCadas.getText();
+        senhaConfirma = textConfimarSenha.getText();
+        setVisible(false);
     }//GEN-LAST:event_buttonFinalizarActionPerformed
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
@@ -339,7 +347,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField textBairro;
     private javax.swing.JTextField textCep;
     private javax.swing.JTextField textCidade;
-    private javax.swing.JTextField textConfimarSenha;
+    private javax.swing.JPasswordField textConfimarSenha;
     private javax.swing.JTextField textCpf;
     private javax.swing.JTextField textEmail;
     private javax.swing.JTextField textEstado;
@@ -347,6 +355,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField textNome;
     private javax.swing.JTextField textNumero;
     private javax.swing.JTextField textRua;
-    private javax.swing.JTextField textSenhaCadas;
+    private javax.swing.JPasswordField textSenhaCadas;
     // End of variables declaration//GEN-END:variables
 }

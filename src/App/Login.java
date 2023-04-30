@@ -13,7 +13,9 @@ import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
     
     HomePage home = new HomePage();
-    HomepageFornecedor homefor = new HomepageFornecedor();
+    HomePageFornecedor homefor = new HomePageFornecedor();
+    String login;
+    String senha;
     
     /**
      * Creates new form Login
@@ -36,12 +38,12 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         buttonEntrar = new javax.swing.JToggleButton();
         textLogin = new javax.swing.JTextField();
-        textSenha = new javax.swing.JTextField();
         cadastroFornecedor = new javax.swing.JButton();
         labelLogin = new javax.swing.JLabel();
         labelSenha = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
         buttonCadastro = new javax.swing.JButton();
+        textSenha = new javax.swing.JPasswordField();
         fundotransparente = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
@@ -61,7 +63,7 @@ public class Login extends javax.swing.JFrame {
                 buttonEsquecerActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonEsquecer, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 120, -1));
+        jPanel1.add(buttonEsquecer, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 10)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,18 +78,10 @@ public class Login extends javax.swing.JFrame {
                 buttonEntrarActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 110, 30));
+        jPanel1.add(buttonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 110, 30));
 
         textLogin.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jPanel1.add(textLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 150, 20));
-
-        textSenha.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        textSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textSenhaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 150, 20));
 
         cadastroFornecedor.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         cadastroFornecedor.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,6 +120,9 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(buttonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 180, 30));
 
+        textSenha.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jPanel1.add(textSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 150, 20));
+
         fundotransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (7).png"))); // NOI18N
         fundotransparente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         fundotransparente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -149,10 +146,6 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textSenhaActionPerformed
-
     private void buttonCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastroActionPerformed
         // TODO add your handling code here:
         Cadastro cadastro = new Cadastro();
@@ -167,14 +160,14 @@ public class Login extends javax.swing.JFrame {
 
     private void buttonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEntrarActionPerformed
         // TODO add your handling code here:
-        String login = textLogin.getText();
-        String senha = textSenha.getText();
+        login = textLogin.getText();
+        senha = textSenha.getText();
         //HomePage home = new HomePage();
         
-        if (("usuario".equals(login)) && ("123".equals(senha))){
+        if (("cliente@email.com".equals(login)) && ("123".equals(senha))){
             home.setVisible(true);
             setVisible(false);
-        } else if(("usuario".equals(login)) && ("1234".equals(senha))){
+        } else if(("fornecedor@email.com".equals(login)) && ("1234".equals(senha))){
             homefor.setVisible(true);
             setVisible(false);
         } else {
@@ -236,6 +229,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel labelSenha;
     private javax.swing.JLabel logo;
     private javax.swing.JTextField textLogin;
-    private javax.swing.JTextField textSenha;
+    private javax.swing.JPasswordField textSenha;
     // End of variables declaration//GEN-END:variables
 }

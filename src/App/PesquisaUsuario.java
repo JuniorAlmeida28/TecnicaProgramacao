@@ -257,7 +257,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
         jLabel47.setText("(00) 0000-0000");
 
         jToggleButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/upper-right-arrow-black-symbol.png"))); // NOI18N
-        jToggleButton6.setText("ROTA");
+        jToggleButton6.setText("Rota");
         jToggleButton6.setToolTipText("Como chegar?");
         jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -367,7 +367,7 @@ public class PesquisaUsuario extends javax.swing.JFrame {
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton3))
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(19, 19, 19))
         );

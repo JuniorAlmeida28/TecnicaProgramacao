@@ -235,8 +235,8 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textSenhaCadas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textSenhaCadas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="textConfimarSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -289,8 +289,6 @@
                 <Property name="text" type="java.lang.String" value="Senha"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="textSenhaCadas">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -298,8 +296,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Confirmar senha"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textConfimarSenha">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
@@ -370,6 +366,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="textEstado">
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="textSenhaCadas">
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="textConfimarSenha">
             </Component>
           </SubComponents>
         </Container>

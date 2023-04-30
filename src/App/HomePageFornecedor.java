@@ -66,6 +66,14 @@ public class HomePageFornecedor extends javax.swing.JFrame {
         camil = new javax.swing.JButton();
         jPanel19 = new javax.swing.JPanel();
         aurora8 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        JMenu1 = new javax.swing.JMenu();
+        home = new javax.swing.JMenuItem();
+        listaCompras = new javax.swing.JMenuItem();
+        config = new javax.swing.JMenuItem();
+        logout = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(818, 600));
@@ -75,21 +83,31 @@ public class HomePageFornecedor extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/Design sem nome (9).png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/App/Imagem/LogoBMais2.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, 60));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 800, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 830, 10));
 
         consultarProduto.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         consultarProduto.setText("Consultar produto ");
-        jPanel1.add(consultarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, -1, 30));
+        consultarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarProdutoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(consultarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, -1, 30));
 
         cadastrarProduto.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         cadastrarProduto.setText("Cadastrar Produto");
-        jPanel1.add(cadastrarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, -1, 30));
+        cadastrarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarProdutoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cadastrarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, -1, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 270));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 270));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fornecedores cadastrados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 0, 14))); // NOI18N
@@ -512,7 +530,7 @@ public class HomePageFornecedor extends javax.swing.JFrame {
                                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)
                                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -546,7 +564,41 @@ public class HomePageFornecedor extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel2);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 800, 330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 810, 400));
+
+        JMenu1.setText("Menu");
+
+        home.setText("Home");
+        home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeActionPerformed(evt);
+            }
+        });
+        JMenu1.add(home);
+
+        listaCompras.setText("Lista de Compras");
+        JMenu1.add(listaCompras);
+
+        config.setText("Configurações");
+        JMenu1.add(config);
+
+        logout.setText("Logout");
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
+        JMenu1.add(logout);
+
+        jMenuBar1.add(JMenu1);
+
+        jMenu2.setText("Sobre");
+        jMenuBar1.add(jMenu2);
+
+        jMenu1.setText("Contato");
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
         setLocationRelativeTo(null);
@@ -555,6 +607,32 @@ public class HomePageFornecedor extends javax.swing.JFrame {
     private void frimesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frimesaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_frimesaActionPerformed
+
+    private void cadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarProdutoActionPerformed
+        // TODO add your handling code here:
+        CadastroProduto cadastroprod = new CadastroProduto();
+        cadastroprod.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_cadastrarProdutoActionPerformed
+
+    private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
+        // TODO add your handling code here:
+        setVisible(true);
+    }//GEN-LAST:event_homeActionPerformed
+
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        Login telaLogin = new Login();
+        telaLogin.setVisible(true);
+    }//GEN-LAST:event_logoutActionPerformed
+
+    private void consultarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarProdutoActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        ConsultaProduto consulta = new ConsultaProduto();
+        consulta.setVisible(true);
+    }//GEN-LAST:event_consultarProdutoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -592,6 +670,7 @@ public class HomePageFornecedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu JMenu1;
     private javax.swing.JButton Parmalat;
     private javax.swing.JButton aurora;
     private javax.swing.JButton aurora8;
@@ -599,12 +678,17 @@ public class HomePageFornecedor extends javax.swing.JFrame {
     private javax.swing.JButton cadastrarProduto;
     private javax.swing.JButton camil;
     private javax.swing.JButton cocaCola;
+    private javax.swing.JMenuItem config;
     private javax.swing.JButton consultarProduto;
     private javax.swing.JButton friboi;
     private javax.swing.JButton frimesa;
     private javax.swing.JButton fugini;
+    private javax.swing.JMenuItem home;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -621,18 +705,18 @@ public class HomePageFornecedor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JMenuItem listaCompras;
     private javax.swing.JButton liza;
+    private javax.swing.JMenuItem logout;
     private javax.swing.JButton nestle;
     private javax.swing.JButton perdigao;
     private javax.swing.JButton pilao;
     private javax.swing.JButton piracanjuba;
     private javax.swing.JButton sadia;
-    private javax.swing.JButton sadia1;
     private javax.swing.JButton saoBraz;
     // End of variables declaration//GEN-END:variables
 }
